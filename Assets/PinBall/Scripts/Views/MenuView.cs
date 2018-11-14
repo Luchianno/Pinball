@@ -2,6 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Events;
+using TMPro;
 
 public class MenuView : BasicView
 {
@@ -15,6 +16,8 @@ public class MenuView : BasicView
     Button egg;
     [SerializeField]
     BackKeyListener backKey;
+    [SerializeField]
+    TextMeshProUGUI highScoreLabel;
 
     public UnityEvent OnStartClicked;
     public UnityEvent OnStartAIClicked;
@@ -31,4 +34,8 @@ public class MenuView : BasicView
         backKey.BackClicked.AddListener(OnBackKeyClicked.Invoke);
     }
 
+    public void SetHighScore(int score)
+    {
+        highScoreLabel.text = $"High Score: {score}";
+    }
 }

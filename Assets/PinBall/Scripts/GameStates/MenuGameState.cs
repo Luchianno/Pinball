@@ -9,9 +9,10 @@ public class MenuGameState : GameState, IInitializable
     MenuView view;
     [Inject]
     GameStateMachine sm;
-
     [Inject()]
     AIController AI;
+    [Inject]
+    ScoreController scoreController;
 
     public override void Initialize()
     {
@@ -34,6 +35,7 @@ public class MenuGameState : GameState, IInitializable
     public override void OnEnter()
     {
         view.enabled = true;
+        view.SetHighScore(scoreController.HighScore);
     }
 
     public override void OnExit()
