@@ -2382,7 +2382,7 @@ MonoBehaviour:
   AIStart: {fileID: 491581191}
   highScore: {fileID: 128346073}
   egg: {fileID: 688310867}
-  backKey: {fileID: 0}
+  backKey: {fileID: 2105368559}
   OnStartClicked:
     m_PersistentCalls:
       m_Calls: []
